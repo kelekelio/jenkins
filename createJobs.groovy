@@ -6,3 +6,17 @@ pipelineJob('pipelineJob') {
         }
     }
 }
+pipelineJob('aionDB') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/kelekelio/AionSpringBootDB.git'
+                    }
+                    branch 'develop'
+                }
+            }
+        }
+    }
+}
