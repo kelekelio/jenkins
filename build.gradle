@@ -31,7 +31,7 @@ dockerRun {
     name "${project.name}"
     image "${project.name}:${project.version}"
     ports '8080:8080'
-    clean true
+    clean false
     daemonize false
     arguments '-v', "$extraPrefix/var/run/docker.sock:/var/run/docker.sock", '--group-add', dockerSockGroupId
 }
